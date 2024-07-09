@@ -28,3 +28,9 @@ jobs:
 
       - name: Build docker image
         run: docker build -t gmarinho21/nlw.journey.api:${{ steps.generate_sha.outputs.sha}} .
+
+      - name: Push Image
+        run: |
+          docker push gmarinho21/nlw.journey.api:${{ steps.generate_sha.outputs.sha}}
+          docker tag gmarinho21/nlw.journey.api:${{ steps.generate_sha.outputs.sha}} gmarinho21/nlw.journey.api:latest
+          docker push gmarinho21/nlw.journey.api:latest
