@@ -2,7 +2,7 @@ replicaCount: 10
 image:
   repository: gmarinho21/nlw.journey.api
   pullPolicy: IfNotPresent
-  tag: c4d1a2b
+  tag: dc934e3
   containerPort: 8080
 imagePullSecrets: []
 nameOverride: ''
